@@ -11,12 +11,25 @@
   text-transform: capitalize;
 }
 .secondTitle {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .form {
   margin-bottom: 15px;
 }
+.selectOption {
+  padding: 10px;
+}
 
 .littleTitle {
   margin-bottom: 15px;
+  background-color: aquamarine;
+  color: white;
+  padding: 10px;
+  border-radius: 20%;
+}
+
+.btnPlay {
+  background-color: aquamarine;
+  color: white;
+  padding: 10px;
 }

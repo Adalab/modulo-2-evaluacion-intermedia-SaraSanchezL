@@ -14,7 +14,6 @@ function getRandomNumber(max) {
  
  function randomMove() {           
   const randomNum = getRandomNumber(10);
- console.log(randomNum);
   let move = '';
 
   if (randomNum <= 3) {           
@@ -28,7 +27,6 @@ function getRandomNumber(max) {
   }
   return move;
 }
-console.log(randomMove());
 
 
 let contador = 0;
@@ -42,26 +40,25 @@ function compareMove () {
   } else if (valueOptions.value === 'papel'  && moveCpu === 'papel') {
     littleTitle.innerHTML = 'Empate';
 }  else if (valueOptions.value === 'tijera'  && moveCpu === 'papel') {
-   littleTitle.innerHTML = 'Jugador gana';
+   littleTitle.innerHTML = '¡Has ganado!';
    player.innerHTML = 'Jugador:' + contador++;
 }  else if (valueOptions.value === 'papel'  && moveCpu === 'piedra') {
-  littleTitle.innerHTML = 'Jugador gana';
+  littleTitle.innerHTML = '¡Has ganado!';
   player.innerHTML = 'Jugador:' + contador++;
 }  else if (valueOptions.value === 'piedra'  && moveCpu === 'tijera') {
-  littleTitle.innerHTML = 'Jugador gana';
+  littleTitle.innerHTML = '¡Has ganado!';
   player.innerHTML = 'Jugador:' + contador++;
 }  else if (valueOptions.value === 'papel'  && moveCpu === 'tijera') {
-  littleTitle.innerHTML = 'Cpu gana';
+  littleTitle.innerHTML = '¡Has perdido!';
   cpu.innerHTML = 'Computadora:' + contador++;
 } else if (valueOptions.value === 'tijera'  && moveCpu === 'piedra') {
-  littleTitle.innerHTML = 'Cpu gana';
+  littleTitle.innerHTML = 'Has perdido!';
   cpu.innerHTML = 'Computadora:' + contador++;
 } else if (valueOptions.value === 'piedra'  && moveCpu === 'papel') {
-  littleTitle.innerHTML = 'Cpu gana';
+  littleTitle.innerHTML = 'Has perdido!';
   cpu.innerHTML = 'Computadora:' + contador++;
 } 
 }
-
 
 function reset () {
   if (contador >= 10) {
