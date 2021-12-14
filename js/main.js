@@ -14,6 +14,7 @@ function getRandomNumber(max) {
  
  function randomMove() {           
   const randomNum = getRandomNumber(10);
+ console.log(randomNum);
   let move = '';
 
   if (randomNum <= 3) {           
@@ -22,31 +23,58 @@ function getRandomNumber(max) {
   } else if  (randomNum <= 6) {
     move = 'papel'; 
 
-  } else if (randomNum > 7) {
+  } else {
     move = 'tijera';
   }
   return move;
 }
-// console.log(randomMove());
-// console.log(getRandomNumber(10));
+console.log(randomMove());
 
 
+let contador = 0;
 
 function compareMove () {
-  let playerMove = valueOptions.value; 
-  if (playerMove === move){
-    littleTitle.innerHTML = 'Empate'
-  } else if (playerMove !== move) {
-    littleTitle.innerHTML = 'Tu ganas'
+  const moveCpu = randomMove();
+  if (valueOptions.value === 'tijera' && moveCpu === 'tijera'){
+    littleTitle.innerHTML = 'Empate';
+  } else if (valueOptions.value === 'piedra'  && moveCpu === 'piedra') {
+    littleTitle.innerHTML = 'Empate';
+  } else if (valueOptions.value === 'papel'  && moveCpu === 'papel') {
+    littleTitle.innerHTML = 'Empate';
+}  else if (valueOptions.value === 'tijera'  && moveCpu === 'papel') {
+   littleTitle.innerHTML = 'Jugador gana';
+   player.innerHTML = 'Jugador:' + contador++;
+}  else if (valueOptions.value === 'papel'  && moveCpu === 'piedra') {
+  littleTitle.innerHTML = 'Jugador gana';
+  player.innerHTML = 'Jugador:' + contador++;
+}  else if (valueOptions.value === 'piedra'  && moveCpu === 'tijera') {
+  littleTitle.innerHTML = 'Jugador gana';
+  player.innerHTML = 'Jugador:' + contador++;
+}  else if (valueOptions.value === 'papel'  && moveCpu === 'tijera') {
+  littleTitle.innerHTML = 'Cpu gana';
+  cpu.innerHTML = 'Computadora:' + contador++;
+} else if (valueOptions.value === 'tijera'  && moveCpu === 'piedra') {
+  littleTitle.innerHTML = 'Cpu gana';
+  cpu.innerHTML = 'Computadora:' + contador++;
+} else if (valueOptions.value === 'piedra'  && moveCpu === 'papel') {
+  littleTitle.innerHTML = 'Cpu gana';
+  cpu.innerHTML = 'Computadora:' + contador++;
+} 
+}
+
+
+function reset () {
+  if (contador >= 10) {
+    player.innerHTML = 'Jugador :' + 0; 
+    cpu.innerHTML = 'Computadora : ' + 0; 
   }
 }
 
-function countPoints () {
-  if ()
-}
-
-function handleClickBtn () {
+function handleClickBtn (event) {
+  event.preventDefault();
   randomMove();
+  compareMove();
+  reset();
 }
 
 btnPlay.addEventListener('click', handleClickBtn);
