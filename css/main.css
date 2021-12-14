@@ -1,0 +1,22 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid 5px green;
+  height: 50vh;
+}
+.mainTitle {
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+.secondTitle {
+  margin-bottom: 15px;
+}
+.form {
+  margin-bottom: 15px;
+}
+
+.littleTitle {
+  margin-bottom: 15px;
+}
