@@ -9,15 +9,19 @@
 .mainTitle {
   margin-bottom: 20px;
   text-transform: capitalize;
+  color: grey;
 }
 .secondTitle {
   margin-bottom: 20px;
+  color: darkgray;
 }
 .form {
   margin-bottom: 15px;
 }
 .selectOption {
   padding: 10px;
+  border: solid 2px lightgrey;
+  cursor: pointer;
 }
 
 .littleTitle {
@@ -31,14 +35,29 @@
 .btnPlay {
   background-color: aquamarine;
   color: white;
+  font-weight: bold;
   padding: 10px;
+  border-color: lightgrey;
+  border-radius: 10%;
+  cursor: pointer;
 }
 
 .resetBtn {
   margin-top: 20px;
   background-color: aqua;
   color: white;
+  font-weight: bold;
   padding: 10px;
+  cursor: pointer;
+}
+.player {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: grey;
+}
+.cpu {
+  font-weight: bold;
+  color: grey;
 }
 
 .hidden {

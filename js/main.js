@@ -53,10 +53,10 @@ function compareMove () {
   littleTitle.innerHTML = '¡Has perdido!';
   cpu.innerHTML = 'Computadora:' + contador++;
 } else if (valueOptions.value === 'tijera'  && moveCpu === 'piedra') {
-  littleTitle.innerHTML = 'Has perdido!';
+  littleTitle.innerHTML = '¡Has perdido!';
   cpu.innerHTML = 'Computadora:' + contador++;
 } else if (valueOptions.value === 'piedra'  && moveCpu === 'papel') {
-  littleTitle.innerHTML = 'Has perdido!';
+  littleTitle.innerHTML = '¡Has perdido!';
   cpu.innerHTML = 'Computadora:' + contador++;
 } 
 }
