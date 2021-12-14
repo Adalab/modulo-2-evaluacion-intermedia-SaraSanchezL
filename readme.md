@@ -1,4 +1,4 @@
-# Módulo 2: Ejercicio de evaluación intermedia
+# Módulo 2: Ejercicio de Evaluación Intermedia
 
 - El ejercicio consiste en desarrollar el juego "Piedra, Papel y Tijera". En el juego ambos jugadores tienen que
   hacer una piedra, papel o tijeras. Solo tiene dos resultados posibles: un empate o una victoria para un
