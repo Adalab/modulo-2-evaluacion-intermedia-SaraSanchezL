@@ -20,6 +20,7 @@
 }
 .selectOption {
   padding: 10px;
+  margin-right: 5px;
   border: solid 2px lightgrey;
   cursor: pointer;
 }
