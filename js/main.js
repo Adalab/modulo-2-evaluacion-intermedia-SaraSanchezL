@@ -5,6 +5,7 @@ const btnPlay = document.querySelector(".js-btnPlay");
 const littleTitle = document.querySelector(".js-littleTitle");
 const player = document.querySelector(".js-player");
 const cpu = document.querySelector(".js-cpu");
+const resetBtn = document.querySelector(".js-resetBtn");
 
 
 function getRandomNumber(max) {
@@ -64,7 +65,16 @@ function reset () {
   if (contador >= 10) {
     player.innerHTML = 'Jugador :' + 0; 
     cpu.innerHTML = 'Computadora : ' + 0; 
+    btnPlay.classList.add('hidden');
+    resetBtn.classList.remove('hidden');
   }
+}
+
+function handleClickReset () {
+  btnPlay.classList.remove('hidden');
+  resetBtn.classList.add('hidden');
+  contador = 0; 
+  littleTitle.innerHTML = 'Vamos a jugar!';
 }
 
 function handleClickBtn (event) {
@@ -75,3 +85,4 @@ function handleClickBtn (event) {
 }
 
 btnPlay.addEventListener('click', handleClickBtn);
+resetBtn.addEventListener('click', handleClickReset);

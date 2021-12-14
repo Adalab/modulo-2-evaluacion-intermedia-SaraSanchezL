@@ -33,3 +33,14 @@
   color: white;
   padding: 10px;
 }
+
+.resetBtn {
+  margin-top: 20px;
+  background-color: aqua;
+  color: white;
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
