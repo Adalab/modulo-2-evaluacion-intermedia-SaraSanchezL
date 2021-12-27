@@ -60,6 +60,11 @@
   font-weight: bold;
   color: grey;
 }
+.totalRounds {
+  font-weight: bold;
+  color: grey;
+  margin-top: 10px;
+}
 
 .hidden {
   display: none;
