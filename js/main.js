@@ -36,6 +36,7 @@ let contadorTotal = 0;
 let playerWin = 0;
 let cpuWin = 0;
 
+
 function compareMove () {
   const moveCpu = randomMove();
   contadorTotal++;
@@ -46,27 +47,37 @@ function compareMove () {
   } else if (valueOptions.value === 'papel'  && moveCpu === 'papel') {
     littleTitle.innerHTML = 'Empate';
 }  else if (valueOptions.value === 'tijera'  && moveCpu === 'papel') {
-   littleTitle.innerHTML = '¡Has ganado!';
+   renderTitleWin();
    playerWin++;
 }  else if (valueOptions.value === 'papel'  && moveCpu === 'piedra') {
-  littleTitle.innerHTML = '¡Has ganado!';
+  renderTitleWin(); 
   playerWin++;
 }  else if (valueOptions.value === 'piedra'  && moveCpu === 'tijera') {
-  littleTitle.innerHTML = '¡Has ganado!';
+  renderTitleWin(); 
   playerWin++;
 }  else if (valueOptions.value === 'papel'  && moveCpu === 'tijera') {
-  littleTitle.innerHTML = '¡Has perdido!';
+  renderTitleLose();
   cpuWin++;
 } else if (valueOptions.value === 'tijera'  && moveCpu === 'piedra') {
-  littleTitle.innerHTML = '¡Has perdido!';
+  renderTitleLose();
   cpuWin++;
 } else if (valueOptions.value === 'piedra'  && moveCpu === 'papel') {
-  littleTitle.innerHTML = '¡Has perdido!';
+  renderTitleLose();
   cpuWin++;
 } 
-player.innerHTML = 'Jugador: ' + playerWin;
-cpu.innerHTML = 'Computadora: ' + cpuWin;
-totalRounds.innerHTML = 'Rondas: ' + contadorTotal;
+renderCounter (); 
+};
+
+function renderCounter () {
+  player.innerHTML = 'Jugador: ' + playerWin;
+  cpu.innerHTML = 'Computadora: ' + cpuWin;
+  totalRounds.innerHTML = 'Ronda: ' + contadorTotal;
+}
+function renderTitleWin() {
+  littleTitle.innerHTML = '¡Has ganado!';
+};
+function renderTitleLose() {
+  littleTitle.innerHTML = '¡Has perdido!';
 };
 
 function reset () {
@@ -74,7 +85,7 @@ function reset () {
     player.innerHTML = 'Jugador : ' + 0; 
     cpu.innerHTML = 'Computadora : ' + 0; 
     totalRounds.innerHTML = 'Ronda : ' + 0;
-    valueOptions.value = "seleccione su jugada";
+    valueOptions.value = "";
     btnPlay.classList.add('hidden');
     resetBtn.classList.remove('hidden');
     if (playerWin > cpuWin){
