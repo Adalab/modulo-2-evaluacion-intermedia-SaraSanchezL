@@ -1,12 +1,9 @@
-# Módulo 2: Ejercicio de Evaluación Intermedia
+# Juego de Piedra, Papel y Tijera.
 
 - El ejercicio consiste en desarrollar el juego "Piedra, Papel y Tijera". En el juego ambos jugadores tienen que
   elegir piedra, papel o tijera. Solo tiene dos resultados posibles: un empate o una victoria para un
   jugador y una derrota para el otro jugador. Diseñaremos el juego usando JavaScript donde un jugador
   jugará contra la computadora.
-- Antes de empezar, tenéis que crear un nuevo repositorio en GitHub desde GitHub Classroom usando este
-  enlace. Una vez creado, lo clonaremos en nuestro ordenador y en la carpeta creada empezaremos a
-  trabajar en el ejercicio.
 
 ## Descripción
 
